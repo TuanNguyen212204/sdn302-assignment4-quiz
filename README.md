@@ -119,14 +119,20 @@ Admin responses include the answer index for management.
 
 Import the Git repository into Vercel with:
 
-- Root Directory: `Assignment 4/frontend` (or `frontend` if the repository root is Assignment 4).
+- Root Directory: `frontend` (the Vercel project must use the `frontend` folder as its root).
 - Framework: Vite.
 - Build Command: `npm run build`.
 - Output Directory: `dist`.
 - Environment variable: `VITE_API_URL=https://YOUR-BACKEND-URL`.
 
 `frontend/vercel.json` rewrites client-side routes to `index.html` so refresh works
-on `/login`, `/dashboard`, `/admin` and quiz routes.
+on `/login`, `/register`, `/dashboard`, `/dashboard/quiz/:quizId`, `/admin`,
+`/admin/questions` and `/admin/quizzes`. After changing `vercel.json` or the Root
+Directory, create a new deployment; an old deployment keeps its old routing rules.
+
+If Vercel asks for the project root during import, choose `frontend`, not the
+repository parent. A deployment configured with the parent root can build the
+wrong package or miss this SPA rewrite file.
 
 ### Backend
 

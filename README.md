@@ -13,7 +13,7 @@ This project follows the supplied Assignment 4 requirements:
 - A regular user must log in before quizzes are fetched.
 - A regular user can take a quiz and submit answers.
 - An admin can create, read, update and delete questions and quizzes.
-- Article and Manage Articles remain as simple static pages because the assignment screenshots include those menu items but the requirements do not request Article CRUD.
+- Article/Manage Articles are intentionally omitted because the written requirements only define quiz and question functionality; the screenshots are UI references.
 
 ## Structure
 
@@ -99,7 +99,6 @@ It also creates the five questions shown in the supplied screenshots and the
 5. Log out and log in as Mary.
 6. Open Manage Questions to add, edit and delete a question.
 7. Open Manage Quizzes to add, edit and delete a quiz and attach questions.
-8. Article is a static page matching the navigation in the screenshots.
 
 The server calculates the score from the correct answer stored in MongoDB. The
 frontend never receives `correctAnswerIndex` for regular users before submission.

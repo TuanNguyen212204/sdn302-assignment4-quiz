@@ -1,0 +1,254 @@
+:root {
+  font-family: Arial, sans-serif;
+  color: #212529;
+  background: white;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #212529;
+  background: white;
+  font-size: 18px;
+}
+
+.btn-primary {
+  --bs-btn-bg: #307bff;
+  --bs-btn-border-color: #307bff;
+  --bs-btn-hover-bg: #2468df;
+  --bs-btn-hover-border-color: #2468df;
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20vh 16px 32px;
+}
+
+.auth-card {
+  width: 432px;
+  padding: 28px;
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.auth-card h2 {
+  margin-bottom: 90px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.auth-card .form-control {
+  min-height: 50px;
+  font-size: 20px;
+}
+
+.auth-card .btn {
+  min-height: 50px;
+  font-size: 20px;
+}
+
+.auth-link {
+  display: block;
+  margin-top: 24px;
+  text-decoration: none;
+  color: #307bff;
+}
+
+.register-card h2 {
+  margin-bottom: 32px;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  padding-right: 46px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  height: 100%;
+  border: 0;
+  background: transparent;
+}
+
+.dashboard-container {
+  width: 91%;
+  max-width: 1400px;
+  margin: 36px auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+  font-size: 52px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.dashboard-header span {
+  padding-right: 12px;
+  font-size: 22px;
+}
+
+.dashboard-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  background: #f8f9fa;
+  padding: 24px 60px;
+  font-size: 22px;
+}
+
+.dashboard-nav a,
+.dashboard-nav button {
+  text-decoration: none;
+  color: #808080;
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.dashboard-nav .active,
+.dashboard-nav a:hover,
+.dashboard-nav button:hover {
+  color: #111;
+}
+
+.content-section {
+  margin: 32px 16px;
+}
+
+.content-section h2 {
+  font-size: 36px;
+}
+
+.content-section h3 {
+  font-size: 28px;
+}
+
+.form-control,
+.form-select {
+  font-size: 18px;
+}
+
+.question-form .form-row {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.question-form .form-control {
+  min-height: 44px;
+}
+
+.question-picker {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.quiz-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+.take-quiz {
+  width: max-content;
+  max-width: 95%;
+  margin: 70px auto 30px;
+  font-size: 22px;
+}
+
+.take-quiz h2,
+.quiz-completed h2 {
+  font-size: 44px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.take-quiz legend {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.take-quiz .btn,
+.quiz-completed .btn {
+  font-size: 22px;
+  padding: 10px 16px;
+}
+
+.question-progress {
+  color: #666;
+  text-align: center;
+  font-size: 15px;
+}
+
+.quiz-completed {
+  margin-top: 70px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.score-total {
+  font-size: 16px;
+  color: #666;
+}
+
+@media (max-width: 700px) {
+  .auth-page {
+    padding-top: 40px;
+  }
+  .auth-card h2 {
+    margin-bottom: 36px;
+  }
+  .dashboard-container {
+    width: 94%;
+    margin-top: 24px;
+  }
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 24px;
+  }
+  .dashboard-header h1 {
+    font-size: 36px;
+  }
+  .dashboard-nav {
+    padding: 18px;
+    gap: 16px;
+    font-size: 18px;
+  }
+  .content-section {
+    margin: 24px 0;
+  }
+  .question-form .form-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .take-quiz legend {
+    font-size: 27px;
+  }
+  .quiz-list-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

@@ -10,7 +10,6 @@ import QuizListPage from "./pages/QuizListPage";
 import TakeQuizPage from "./pages/TakeQuizPage";
 import ManageQuestionsPage from "./pages/ManageQuestionsPage";
 import ManageQuizzesPage from "./pages/ManageQuizzesPage";
-import ArticlePage from "./pages/ArticlePage";
 
 function HomePage() {
   // The reference dashboard home is intentionally empty beneath navigation.
@@ -41,7 +40,6 @@ export default function App() {
           <Route index element={<HomePage />} />
           <Route path="quiz" element={<QuizListPage />} />
           <Route path="quiz/:quizId" element={<TakeQuizPage />} />
-          <Route path="article" element={<ArticlePage />} />
         </Route>
       </Route>
       <Route element={<ProtectedRoute adminOnly />}>
@@ -49,7 +47,6 @@ export default function App() {
           <Route index element={<HomePage />} />
           <Route path="questions" element={<ManageQuestionsPage />} />
           <Route path="quizzes" element={<ManageQuizzesPage />} />
-          <Route path="articles" element={<ArticlePage />} />
         </Route>
       </Route>
       <Route path="*" element={<Navigate to="/login" replace />} />

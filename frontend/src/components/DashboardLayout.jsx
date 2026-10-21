@@ -31,12 +31,10 @@ export default function DashboardLayout() {
           <>
             <NavLink to="/admin/questions">Manage Questions</NavLink>
             <NavLink to="/admin/quizzes">Manage Quizzes</NavLink>
-            <NavLink to="/admin/articles">Manage Articles</NavLink>
           </>
         ) : (
           <>
             <NavLink to="/dashboard/quiz">Quiz</NavLink>
-            <NavLink to="/dashboard/article">Article</NavLink>
           </>
         )}
         <button type="button" onClick={handleLogout}>

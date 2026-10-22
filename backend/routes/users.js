@@ -34,11 +34,13 @@ router.post("/register", async function (req, res) {
   }
 
   const passwordHash = await bcrypt.hash(password, 12);
-  // Public signup always creates a regular user. Admin is provisioned by seed.
+  // Demo API: only JSON boolean true creates an admin.
+  // The web registration form omits this field, so it creates a regular user.
+  const admin = req.body.admin === true;
   const user = await User.create({
     username: username.trim(),
     password: passwordHash,
-    admin: false,
+    admin: admin,
   });
   res.status(201).json({ user: user });
 });

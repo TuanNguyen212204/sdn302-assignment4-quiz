@@ -9,7 +9,7 @@ This project follows the supplied Assignment 4 requirements:
 - Redux Toolkit for authentication, quizzes, answers and score state.
 - React Router for login, dashboard, quiz and admin pages.
 - Bootstrap 5 for forms, buttons and layout.
-- Public signup creates a regular user. The seeded Mary account is the admin demo account.
+- The web signup form creates a regular user. For Postman demos, registration with JSON `admin: true` creates an admin; omitted/false values create a regular user.
 - A regular user must log in before quizzes are fetched.
 - A regular user can take a quiz and submit answers.
 - An admin can create, read, update and delete questions and quizzes.
@@ -91,6 +91,22 @@ It also creates the five questions shown in the supplied screenshots and the
 `General Knowledge` quiz. Existing records are kept.
 
 ## Demo flow
+
+To create an admin for a Postman demonstration, send `POST /users/register` with:
+
+```json
+{
+  "username": "admin_demo",
+  "password": "AdminPass123!",
+  "admin": true
+}
+```
+
+Only the boolean `true` grants admin. `false`, an omitted field, `null`, a number,
+or the string `"true"` creates a regular user. Existing accounts are unchanged;
+use another username if registration returns 409. The web form still sends only
+username and password. This public admin signup is for the assignment demo:
+any caller using `admin: true` can create an administrator.
 
 1. Open `/login` and log in as John.
 2. Open Quiz and choose General Knowledge.
